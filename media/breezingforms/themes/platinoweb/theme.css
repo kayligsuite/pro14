@@ -1,0 +1,530 @@
+/*
+ ########## BreezingForms 1.7.1 QuickMode ##########
+ @autor crosstec.de
+ @copyright Copyright (C) 2010 crosstec.de. All rights reserved.
+ ########################################
+*/
+
+/* #### Custom Fonts #### */
+.bfQuickMode button{
+    outline: none;
+}
+
+.bfQuickMode legend{
+    border: 0;
+}
+
+@font-face {
+	font-family: 'YanoneKaffeesatzRegular';
+	src: url('fonts/YanoneKaffeesatz-Regular-webfont.html');
+	src: local('☺'), url('fonts/YanoneKaffeesatz-Regular-webfont-2.html') format('woff'), url('fonts/YanoneKaffeesatz-Regular-webfont-3.html') format('truetype'), url('fonts/YanoneKaffeesatz-Regular-webfont-4.html#webfonthKXnaAjv') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'YanoneKaffeesatzBold';
+	src: url('fonts/YanoneKaffeesatz-Bold-webfont.html');
+	src: local('☺'), url('fonts/YanoneKaffeesatz-Bold-webfont-2.html') format('woff'), url('fonts/YanoneKaffeesatz-Bold-webfont-3.html') format('truetype'), url('fonts/YanoneKaffeesatz-Bold-webfont-4.html#webfont6SmZJ6dM') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ##### CSS3 Animations (Webkit Browsers only) ##### */
+
+@-webkit-keyframes pulse {
+	0% {
+	-webkit-box-shadow: 1px 1px 0 rgba(66, 166, 236, 0), -1px -1px 0 rgba(66, 166, 236, 0);
+	}
+	50% {
+	-webkit-box-shadow: 1px 1px 0 rgba(66, 166, 236, 1), -1px -1px 0 rgba(66, 166, 236, 1);
+	}
+	100% {
+	-webkit-box-shadow: 1px 1px 0 rgba(66, 166, 236, 0), -1px -1px 0 rgba(66, 166, 236, 0);
+	}
+}
+
+@-moz-keyframes pulse {
+	0% {
+	-moz-box-shadow: 1px 1px 0 rgba(66, 166, 236, 0), -1px -1px 0 rgba(66, 166, 236, 0);
+	}
+	50% {
+	-moz-box-shadow: 1px 1px 0 rgba(66, 166, 236, 1), -1px -1px 0 rgba(66, 166, 236, 1);
+	}
+	100% {
+	-moz-box-shadow: 1px 1px 0 rgba(66, 166, 236, 0), -1px -1px 0 rgba(66, 166, 236, 0);
+	}
+}
+
+@keyframes pulse {
+	0% {
+	box-shadow: 1px 1px 0 rgba(66, 166, 236, 0), -1px -1px 0 rgba(66, 166, 236, 0);
+	}
+	50% {
+	box-shadow: 1px 1px 0 rgba(66, 166, 236, 1), -1px -1px 0 rgba(66, 166, 236, 1);
+	}
+	100% {
+	box-shadow: 1px 1px 0 rgba(66, 166, 236, 0), -1px -1px 0 rgba(66, 166, 236, 0);
+	}
+}
+
+
+/* #### Colors #### */
+
+/* ## Background Colors ##*/
+/* Page BG */.bfPage-m {background: #004693;}
+/* BG Fielset */.bfQuickMode .bfFieldset-m, .bfQuickMode .bfWrapperInline .bfFieldset-m {background: #004693 !important;}
+/* BG Fielset Level 2*/.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfFieldset-m {background: #f1f1f1 !important;}
+
+
+/* ## Font Colors ## */
+/* Standard Font Color in Form*/ .bfQuickMode {color: #f8f9fa;}
+/* Legend Fieldset */ .bfQuickMode .bfLegend-m {color: #4ab5f5 !important;}
+/* Legend Fieldset Level 2*/ .bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfLegend-m {color: #4ab5f5 !important;}
+/* Buttons */ .bfQuickMode button span, .bfQuickMode .bfDivButtonWrapper .bfDivButtonMain  {color: #ffffff !important;}
+/* Not Available */ .bfQuickMode .bfNotAvailable {color: #888 !important;}
+/* Required */ .bfQuickMode .bfRequired {color: #ffc107;}
+/* Max Length Counter */ .bfMaxLengthCounter {color: #0f7fc9;}
+
+/* Rollovers */
+/*Regular*/.bfQuickMode section.bfRolloverBg, .bfQuickMode span.bfRolloverBg, .bfQuickMode .bfWrapperInline section.bfRolloverBg {background-color: #ededed !important;}
+/* Fieldset Level 1 */ .bfQuickMode .bfWrapperInline section.bfRolloverBg, .bfQuickMode .bfWrapperInline span.bfRolloverBg {background-color: #e6e6e6 !important;}
+/* Fieldset Level 2 */ .bfQuickMode .bfWrapperBlock .bfWrapperBlock section.bfRolloverBg, .bfQuickMode .bfWrapperBlock .bfWrapperBlock span.bfRolloverBg {background-color: #dfdfdf !important;}
+
+/* Input Fields */
+.bfPage select option, .bfPage select, .bfPage input[type='file'] {background-color: #ffffff;}
+.bfQuickMode input[type=text], .bfQuickMode input[type=password], .bfQuickMode textarea, .bfQuickMode select {border: 1px solid #d6d6d6;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 15px;}
+.bfQuickMode textarea:hover, .bfQuickMode input[type='text']:hover, .bfQuickMode input[type='password']:hover, .bfQuickMode select:hover {border-color: #888;}
+.bfQuickMode textarea:focus, .bfQuickMode input[type='text']:focus, .bfQuickMode input[type='password']:focus, .bfQuickMode select:focus {
+	outline:none;
+	border-color: #42a6ec;
+	
+	-webkit-box-shadow: 1px 1px 0 rgba(66, 166, 236, 1), -1px -1px 0 rgba(66, 166, 236, 1);
+	-moz-box-shadow: 1px 1px 0 rgba(66, 166, 236, 1), -1px -1px 0 rgba(66, 166, 236, 1);
+	box-shadow: 1px 1px 0 rgba(66, 166, 236, 1), -1px -1px 0 rgba(66, 166, 236, 1);
+	-webkit-animation: pulse 1s infinite ease-in-out;
+        -moz-animation: pulse 1s infinite ease-in-out;
+        animation: pulse 1s infinite ease-in-out;
+}
+
+
+/* ##### General BreezingForms styles ##### */
+
+.bfPage-tl { background: transparent url('img/bg_page-tl.html') top left no-repeat; }
+.bfPage-tr { background: transparent url('img/bg_page-tr.html') top right no-repeat; }
+.bfPage-t { height: 25px; background: transparent url('img/bg_page-t.html') 0 0 repeat-x; margin: 0 25px; }
+
+.bfPage-l { background: transparent url('img/bg_page-l.html') 0 0 repeat-y; }
+.bfPage-r { background: transparent url('img/bg_page-r.html') 100% 0 repeat-y; }
+
+.bfPage-m {
+    margin: 0 25px;
+    padding-top: 10px;
+}
+
+.bfPage-bl { background: transparent url('img/bg_page-bl.html') bottom left no-repeat; }
+.bfPage-br { background: transparent url('img/bg_page-br.html') bottom right no-repeat; }
+.bfPage-b { height: 0px; background: transparent url('img/bg_page-b.html') 0 0 repeat-x; margin: 0 25px; }
+
+.bfQuickMode {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfQuickMode fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+
+.bfQuickMode .bfWrapperInline .bfFieldset-tl, .bfQuickMode .bfFieldset-tl { background: transparent url('img/bg_fieldset-tl.html') top left no-repeat !important; }
+.bfQuickMode .bfWrapperInline .bfFieldset-tr, .bfQuickMode .bfFieldset-tr { background: transparent url('img/bg_fieldset-tr.html') top right no-repeat !important; }
+.bfQuickMode .bfWrapperInline .bfFieldset-t, .bfQuickMode .bfFieldset-t { height: 11px; background: transparent url('img/bg_fieldset-t.html') 0 0 repeat-x !important; margin: 0 19px !important; }
+
+.bfQuickMode .bfWrapperInline .bfFieldset-l, .bfQuickMode .bfFieldset-l { background: transparent url('img/bg_fieldset-l.html') 0 0 repeat-y !important; }
+.bfQuickMode .bfWrapperInline .bfFieldset-r, .bfQuickMode .bfFieldset-r { background: transparent url('img/bg_fieldset-r.html') 100% 0 repeat-y !important; }
+
+.bfQuickMode .bfFieldset-m {
+    margin: 0 19px !important;
+	padding: 0 5px 0 5px !important;
+}
+
+.bfQuickMode .bfWrapperInline .bfFieldset-bl, .bfQuickMode .bfFieldset-bl { background: transparent url('img/bg_fieldset-bl.html') bottom left no-repeat !important; }
+.bfQuickMode .bfWrapperInline .bfFieldset-br, .bfQuickMode .bfFieldset-br { background: transparent url('img/bg_fieldset-br.html') bottom right no-repeat !important; }
+.bfQuickMode .bfWrapperInline .bfFieldset-b, .bfQuickMode .bfFieldset-b { height: 14px; background: transparent url('img/bg_fieldset-b.html') 0 0 repeat-x !important; margin: 0 19px !important; }
+
+.bfQuickMode fieldset {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+}
+
+
+/*#### Legend ####*/
+
+.bfQuickMode legend, .bfQuickMode .bfWrapperBlock legend, .bfQuickMode .bfWrapperBlock .bfWrapperBlock legend {
+    font-size: 100%;
+    font-weight: normal;
+    color: #000;
+    left: -3px;
+}
+
+.bfQuickMode legend {
+    text-align: left;
+}
+
+.bfQuickMode .bfWrapperBlock legend {
+        padding: 5px;
+}
+
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock legend {
+}
+
+.bfQuickMode .bfLegend-l {
+    padding: 0;
+    background: none;
+    left: 0;
+	width: 100%;
+}
+
+.bfQuickMode .bfLegend-l, .bfQuickMode .bfLegend-r, .bfQuickMode .bfLegend-m {
+	display: inline-block; 
+	height: 35px;
+}
+
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfLegend-l, .bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfLegend-r, .bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfLegend-m {
+	display: inline-block; 
+	height: 32px;
+}
+
+.bfQuickMode .bfLegend-m {
+	padding-top: 12px;
+	    font-size: 23px;
+    padding-bottom: 29px;
+}
+
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfLegend-m { 
+	font: 24px/21px 'YanoneKaffeesatzRegular', Arial, sans-serif !important;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.65);
+}
+
+.bfQuickMode section.bfElemWrap {
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+
+}
+
+.bfQuickMode span.bfElemWrap {
+    padding: 5px;
+    margin: 10px 10px 0 0;
+}
+
+
+/* ##### inline ##### */
+
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfFieldset-tl { background: transparent url('img/bg_infieldset-tl.html') top left no-repeat !important; }
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfFieldset-tr { background: transparent url('img/bg_infieldset-tr.html') top right no-repeat !important; }
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfFieldset-t { height: 11px; background: transparent url('img/bg_infieldset-t.html') 0 0 repeat-x; margin: 0 12px !important; }
+
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfFieldset-l { background: transparent url('img/bg_infieldset-l.html') 0 0 repeat-y !important; }
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfFieldset-r { background: transparent url('img/bg_infieldset-r.html') 100% 0 repeat-y !important; }
+
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfFieldset-m {
+    margin: 0 12px !important;
+    padding-top: 0 !important;
+}
+
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfFieldset-bl { background: transparent url('img/bg_infieldset-bl.html') bottom left no-repeat !important; }
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfFieldset-br { background: transparent url('img/bg_infieldset-br.html') bottom right no-repeat !important; }
+.bfQuickMode .bfWrapperBlock .bfWrapperBlock .bfFieldset-b { height: 12px; background: transparent url('img/bg_infieldset-b.html') 0 0 repeat-x !important; margin: 0 12px !important; }
+
+.bfQuickMode fieldset.bfInline {
+    width: 100% !important;
+    max-width: 110% !important;
+}
+
+.bfQuickMode fieldset fieldset legend {
+    background: none !important;
+    font-size: 100% !important;
+    font-weight: normal !important;
+}
+
+
+.bfQuickMode fieldset.bfInline section {
+    padding: 5px !important;
+    margin: 0 0 10px 0 !important;
+}
+
+
+/* ##### Labels ##### */
+
+.bfQuickMode .bfInline .bfLabelLeft .bfElementGroupNoWrap input[type='text'] {
+    width: 48%;
+}
+.bfQuickMode label {
+	
+}
+
+.bfElementGroup label, .bfElementGroupNoWrap label {
+	font-weight: normal;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+
+/* ##### Input Fields ##### */
+
+.bfQuickMode input[type=text], .bfQuickMode input[type=password], .bfQuickMode textarea, .bfQuickMode select {
+    padding: 15px;
+    line-height: normal;
+    background: #fff;
+}
+
+.bfQuickMode textarea:focus, .bfQuickMode input[type='text']:focus, .bfQuickMode input[type='password']:focus, .bfQuickMode select:focus {
+	background: url('img/bg_input_focus.html') 0 0 no-repeat;
+}
+
+.bfQuickMode input[type='button'], .bfQuickMode input[type='submit'], .bfQuickMode input[type='checkbox'], .bfQuickMode input[type='image'], .bfQuickMode input[type='radio'], .bfQuickMode input[type='reset'], .bfQuickMode select, .bfQuickMode button {
+    cursor: pointer !important;
+}
+
+.bfQuickMode input[type='hidden'] { display: none; }
+
+
+/* ##### Rollover ##### */
+
+.bfQuickMode section.bfRolloverBg, .bfQuickMode span.bfRolloverBg, .bfQuickMode .bfWrapperInline section.bfRolloverBg, .bfQuickMode .bfWrapperInline span.bfRolloverBg, .bfQuickMode .bfWrapperBlock .bfWrapperBlock section.bfRolloverBg, .bfQuickMode .bfWrapperBlock .bfWrapperBlock span.bfRolloverBg {
+    padding: 5px !important;
+    background-repeat: repeat !important;
+}
+
+
+/* ##### page intro ##### */
+
+.bfQuickMode .bfPageIntro {
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+    background: none;
+    border: none;
+    font-weight: normal;
+}
+
+
+/* ##### error messages #####*/
+
+.bfQuickMode .bfErrorMessage {
+    background: #ffeded;
+    font-weight: bold;
+    float: none;
+    display: block;
+    /*color: red;*/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+
+/* ##### Tooltip ##### */
+
+.bfQuickMode span.hasTip {
+    background: transparent url('img/icon_info.html') right top no-repeat;
+}
+
+
+/* ##### Section Description #####*/
+
+.bfQuickMode .bfSectionDescription {
+    background: none;
+    border: none;
+    font-weight: normal;
+    margin: 0;
+    font: 14px/14px 'YanoneKaffeesatzRegular', Arial, sans-serif !important;
+}
+
+.bfQuickMode .bfSectionDescription section {
+    background: none;
+    border: none;
+}
+
+
+/* ##### Required ##### */
+
+.bfQuickMode .bfRequired {
+    background: none;
+    font-size: 21px;
+	line-height: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    margin-left: 0;
+    float: none;
+}
+
+.bfQuickMode .bfFieldset-m .bfRequired {
+	margin-left: 4px !important;
+}
+
+
+/* ##### Buttons ##### */
+
+/* ## new Button style##*/
+
+.bfQuickMode .bfDivButtonWrapper {
+	display: inline-block !important;
+	position: relative !important;
+	cursor: pointer !important;
+	height: 30px !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+}
+
+.bfQuickMode .bfDivButtonWrapper .bfDivButtonMain {
+	position: relative !important;
+	float: left !important;
+	display: block !important;
+	height: 36px !important;
+	min-width: 18px !important;
+	padding: 3px 0 0 18px !important;
+	font: 16px/22px 'YanoneKaffeesatzRegular', Arial, sans-serif !important;
+	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.25) !important;
+	white-space: nowrap !important;
+	background: transparent url('img/bg_btn.html') no-repeat left top !important;
+}
+
+.bfQuickMode .bfDivButtonWrapper .bfDivButtonRight {
+	position: relative !important;
+	float: left !important;
+	width: 18px !important;
+	height: 36px !important;
+	display: block !important;
+	background: transparent url('img/bg_btn.html') no-repeat right -83px !important;
+}
+
+.bfQuickMode .bfDivButtonWrapper:hover .bfDivButtonMain {
+	background-position: 0 -36px !important;
+	text-shadow: 0 1px 0px rgba(255, 255, 255, 0.5) !important;
+	color: #00629c !important;
+}
+
+.bfQuickMode .bfDivButtonWrapper:hover .bfDivButtonRight {
+    background-position: right -119px !important; 
+}
+
+
+/* ## old Button style## */
+
+.bfQuickMode button { 
+    padding: 5px 14px 5px 0 !important; 
+    margin-right: 5px !important; 
+    font-size: 12px !important;
+    font-weight:bold !important; 
+    text-align: center !important; 
+  background: #c3433f no-repeat right -83px !important;
+    border-radius: 16px;
+    position: relative !important;
+    border: 0 !important; 
+    cursor: pointer !important;
+    overflow: visible !important; /* removes extra side padding in IE */
+}
+
+.bfQuickMode button span {
+    padding: 3px 0 0 18px !important; 
+    height:28px !important; 
+    background: transparent url('img/bg_btn_old.html') no-repeat left top !important; 
+    position: relative !important;
+    display: block !important;
+    white-space: nowrap !important;
+	font: 16px/22px 'Sniglet', Arial, sans-serif !important;
+	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.25) !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.bfQuickMode button span {
+		line-height: 19px !important;
+	}
+}
+
+.bfQuickMode button::-moz-focus-inner {
+    border: none !important;  /* overrides extra padding in Firefox */
+}
+
+.bfQuickMode button:hover, button.submitBtnHover { /* the redundant class is used to apply the hover state with a script */
+    background-position: right -119px !important;
+}
+
+.bfQuickMode button:hover span, button.submitBtnHover span {
+    background-position: 0 -36px !important;
+	text-shadow: none;
+	color: #fff !important;
+}
+
+.bfQuickMode .bfNextButton, .bfQuickMode .bfSubmitButton, .bfQuickMode .bfCancelButton {
+    float: right !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* Safari and Google Chrome only - fix margins */
+    .bfQuickMode button span {
+		padding: 5px 0 0 15px !important;
+    }
+}
+
+.bfQuickMode .bfPrevButton {
+    float: left !important;
+}
+
+.bfQuickMode button.bfCalendar {
+    height: 30px !important;
+    margin: 0 0 0 5px !important;
+	top: -1px !important;
+}
+
+
+/* #### bfTooltip ### */
+
+.bfQuickMode span.bfTooltip {
+    background: url("img/icon_info.html") no-repeat scroll right top transparent;
+    display: block;
+    margin: 0;
+    margin-right: 3px;
+    padding: 0 25px 0 0;
+    width: auto;
+	height: 21px;
+    float: left;
+}
+
+
+/* #### Summary #### */
+
+.bfQuickMode .bfSummarize  {
+	font-weight: normal !important;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.bfQuickMode .bfNotAvailable {
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+.bfQuickMode .bfLabelLeft label {
+    width: 100%;
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+.bfQuickMode section input[type='text'], .bfQuickMode section textarea, .bfQuickMode section select {
+    float: left;
+    margin: 0px;
+    width: 100%;
+}
+input[type="text"] {
+box-shadow: none;
+}
+
+.bfQuickMode .bfFieldset-br {
+    margin-bottom: -20px;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    height: 22px;
+}
